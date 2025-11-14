@@ -1,0 +1,18 @@
+{
+  "folders": [
+    { "path": "." }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "files.eol": "\n"
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "ms-azuretools.vscode-docker",
+      "eamodio.gitlens",
+      "rangav.vscode-thunder-client"
+    ]
+  }
+}
