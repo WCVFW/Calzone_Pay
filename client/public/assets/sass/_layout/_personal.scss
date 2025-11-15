@@ -1,0 +1,330 @@
+//personal section
+.personal__infotabs{
+    background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+    border-radius: 10px;
+    padding: 10px;
+    @include breakpoint(max-lg){
+        margin-bottom: 30px;
+    }
+    .nav{
+        border: unset;
+        display: inline;
+        .nav-item{
+            .nav-link{
+                text-align: left;
+                border-radius: 5px;
+                padding: 13px 20px 13px;
+                width: 100%;
+                outline: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                span{
+                    font-size: rem(18);
+                    font-weight: 500;
+                    @include lato;
+                    color: var(--text);
+                }
+                &.active{
+                    background: linear-gradient(90deg, #2942CB 0%, #273DB1 100%);
+                    border-radius: 5px;
+                    .icon{
+                        img{
+                            filter: brightness(25);
+                        }
+                    }
+                    span{
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
+.personal__infobody{
+    @include breakpoint(max-xs){
+        overflow-x: scroll;
+    }
+}
+.personal__info__box{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 24px 30px;
+    @include breakpoint(max-xs){
+        width: 500px;
+    }
+    .per__ittle{
+        margin-bottom: 20px;
+        h5{
+            color: var(--text);
+            font-weight: 700;
+        }
+        justify-content: space-between;
+        .edit{
+            span{
+                color: var(--text);
+            }
+        }
+        .delete{
+            border: 1px solid var(--borderthree);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            i{
+                font-size: 24px;
+                color: var(--base);
+                margin-top: 0;
+            }
+        }
+    }
+    .personal__details__name{
+        padding: 20px 20px;
+        border-radius: 5px;
+        border: 1px solid var(--bordertwo);
+        li{
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            &:not(:last-child){
+                border-bottom: 1px solid var(--bordertwo);
+            }
+            &:last-child{
+                padding-bottom: 0;
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            .namebold{
+                width: calc(100% - 50%);
+                color: var(--text);
+                @include lato;
+            }
+            span{
+                font-size: rem(16);
+                color: var(--text);
+                @include lato;
+                width: 50%;
+                a{
+                    color: var(--base);
+                }
+            }
+            .actbe{
+                color: var(--base);
+            }
+        }
+    }
+    .closeaccount{
+        gap: 8px;
+        justify-content: flex-end;
+        margin-top: 20px;
+        .icon{
+            i{
+                color: var(--base);
+                font-size: 26px;
+            }
+        }
+        span{
+            color: var(--text);
+        }
+    }
+    .table1{
+        width: 100%;
+        thead{
+            th{
+                font-size: rem(18);
+                font-weight: 600;
+                padding: 15px 20px;
+                color: var(--text);
+                @include lato;
+                background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+            }
+        }
+        tbody{
+            tr{
+                &:nth-child(even){
+                    background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+                }
+                td{
+                    padding: 15px 20px;
+                    font-size: rem(14);
+                    font-weight: 400;
+                    color: var(--text);
+                    @include lato;
+                    .purchase{
+                        border: 1px solid #DFE2F6;
+                        font-size: rem(16);
+                        font-weight: 400;
+                        @include lato;
+                        color: var(--base);
+                        padding: 10px 8px 13px;
+                        width: 140px;
+                        display: block;
+                        text-align: center;
+                        border-radius: 5px;
+                    }
+                    .edit{
+                        img{
+                            filter: brightness(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .debit__creadit{
+        flex-wrap: wrap;
+        gap: 20px;
+        .card__boxed{
+            background: linear-gradient(90deg, rgba(41, 66, 203, 0.1) 0%, rgba(39, 61, 177, 0.1) 100%);
+            border-radius: 10.2563px;
+            padding: 21px;
+            text-align: center;
+            width: 200px;
+            height: 120px;
+            img{
+                margin: 0 auto 8px;
+                display: block;
+            }
+            span{
+                font-size: rem(18);
+                font-weight: 600;
+                @include lato;
+                color: var(--text);
+            }
+        }
+    }
+    .calender__date{
+        position: relative;
+        margin-bottom: 24px;
+        input{
+            width: 100%;
+            padding: 21px 20px 21px 60px;
+            border: 1px solid var(--bordertwo);
+            border-radius: 5px;
+            outline: none;
+        }
+        ::placeholder{
+            font-size: rem(18);
+            color: var(--text);
+            font-weight: 400;
+            @include lato;
+        }
+        i{
+            position: absolute;
+            left: 20px;
+            top: 13px;
+            font-size: 26px;
+            color: var(--base);
+        }
+    }
+}
+.personal__info__boxtwo{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 24px 30px;
+    .per__ittle{
+        margin-bottom: 20px;
+        h5{
+            color: var(--text);
+            font-weight: 700;
+        }
+        justify-content: space-between;
+        .edit{
+            span{
+                color: var(--text);
+            }
+        }
+        .delete{
+            border: 1px solid var(--borderthree);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            i{
+                font-size: 24px;
+                color: var(--base);
+                margin-top: 0;
+            }
+        }
+    }
+}
+.change__password{
+    display: grid;
+    .form__grp{
+        width: 100%;
+        label{
+            font-size: rem(18);
+            @include lato;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+        input{
+            width: 100%;
+            color: var(--text);
+            border-radius: 5px;
+        }
+        ::placeholder{
+            color: var(--text);
+        }
+        .cmn__btn{
+            border-radius: 5px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+}
+.personal__favorites{
+    @include breakpoint(max-xl){
+        overflow-x: scroll;
+        .personal__info__box{
+            width: 700px;
+        }
+    }
+}
+//notification
+.notification__body{
+    .notification__item{
+        display: flex;
+        gap: 15px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--bordertwo);
+        &:first-child{
+            border-top: 1px solid var(--bordertwo);
+        }
+        .form-check-input{
+            background-color: #F4F6FC;
+            border-radius: 50%;
+            outline: none;
+            box-shadow: none;
+            border: 1px solid var(--checkborder);
+        }
+        .form-check-input:checked[type=checkbox] {
+            --bs-form-check-bg-image: url(../../assets/img/payment/check.png);
+            background-size: 0.6rem;
+        }
+        .form-check-input:checked {
+            background-color: #F4F6FC;
+            border-color: var(--checkborder);
+        }
+        label{
+            width: calc(100% - 30px);
+            .announce{
+                display: block;
+                @include lato;
+                color: var(--text);
+                margin-bottom: 1px;
+            }
+            .pragrah{
+                color: var(--text);
+                @include lato;
+            }
+        }
+    }
+}
+//personal section

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+/*CSS Table Of Content Starts Here*/
+/*
+
+
+//Css
+@import "bootstrap.min.css";
+@import "odometer.min.css";
+@import "animate.css";
+@import "magnific-popup.min.css";
+@import "google-font.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.css";
+@import "prism.css";
+//Css
+
+
+@import "_abstracts/_mixins";
+@import "_abstracts/_variables";
+@import "_base/_typography";
+@import "_layout/_header";
+@import "_layout/_banner";
+@import "_layout/_section";
+@import "_layout/_animation";
+---------------------------
+Section css
+---------------------------
+*/
+/*CSS Table Of Content Ends Here*/
+
+//--Abstracts--//
+@import "_components/_function";
+@import "_abstracts/_mixins";
+@import "_abstracts/_variables";
+//--Abstracts--//
+
+//--Base--//
+@import "_base/_typography";
+//--Base--//
+
+//--Layout--//
+@import "_layout/_header";
+@import "_layout/_banner";
+@import "_layout/_blog";
+@import "_layout/_signup";
+@import "_layout/_elements";
+@import "_layout/_personal";
+@import "_layout/_section";
+@import "_layout/_animation";
+@import "_layout/_footer";
+//--Layout--//
+
+//--Components--//
+@import "_components/_buttons";
+//--Components--//
+
+//--Base--//
+@import "_base/_responsive";
+//--Base--//
+
+
+
+//--Css Structur--//
+//--Bootstrap.min.css--//
+@import "bootstrap.min.css";
+//--Odometer.min.css--//
+@import "odometer.min.css";
+//--Animate.css--//
+@import "animate.css";
+//--Magnific-popup.min.css--//
+@import "magnific-popup.min.css";
+//--Google-font.min.css--//
+@import "google-font.css";
+//--Owl.carousel.min.css--//
+@import "owl.carousel.min.css";
+//--Owl.theme.default.min.css--//
+@import "owl.theme.default.css";
+//--Prism.min.css--//
+@import "prism.css";
+//--Css Structur--//

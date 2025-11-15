@@ -1,0 +1,201 @@
+// sign up related
+.signup__section{
+    padding: 172px 0 80px;
+    overflow: hidden;
+}
+.signup__boxes{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 30px 30px;
+    background: var(--white);
+    z-index: 1;
+    @include breakpoint(max-xs){
+        padding: 25px 15px;
+    }
+    h4{
+        color: var(--text);
+        margin-bottom: 15px;
+        font-weight: 700;
+        @include breakpoint(max-xs){
+            font-size: rem(24);
+        }
+    }
+    .head__pra{
+        font-size: rem(18);
+        font-weight: 400;
+        color: var(--text);
+        @include lato;
+    }
+    .recent__code{
+        color: var(--text);
+        font-weight: 600;
+        font-size: rem(18);
+        @include lato;
+    }
+    form{
+        .input__grp{
+            label{
+                font-size: rem(18);
+                font-weight: 600;
+                @include lato;
+                color: var(--text);
+                margin-bottom: 15px;
+            }
+            input{
+                width: 100%;
+                background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+                border: 1px solid #EBEBEB;
+                border-radius: 5px;
+                color: var(--placeholder);
+            }
+            textarea{
+                width: 100%;
+                background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+                border: 1px solid #EBEBEB;
+                border-radius: 5px;
+                color: var(--placeholder);
+                outline: none;
+                box-shadow: none;
+            }
+            ::placeholder{
+                color: var(--placeholder);
+            }
+            .tag__pra{
+                color: var(--text);
+                font-weight: 400;
+                font-size: rem(18);
+                @include lato;
+                a{
+                    color: var(--base);
+                }
+            }
+            .cmn__btn{
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.bluar__shape{
+    position: relative;
+    &::before{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 300px;
+        height: 300px;
+        content: "";
+        background: linear-gradient(90deg, #2942CB 0%, #273DB1 100%);
+        filter: blur(450px);
+        transform: translateY(-50%);
+    }
+}
+.signup__thumb{
+    @include breakpoint(max-xl){
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    @include breakpoint(max-lg){
+        margin-top: 35px;
+    }
+}
+//password box
+.password__box{
+    background: var(--white);
+    .form-group{
+        input{
+            padding: 10px 15px 14px;
+            outline: none;
+            box-shadow: none;
+        }
+        position: relative;
+        .field-icon{
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            i{
+                font-size: 19px;
+                color: var(--base);
+            }
+        }
+    }
+}
+.back__btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .icon{
+        i{
+            font-size: 24px;
+            color: var(--text);
+        }
+    }
+    span{
+        font-size: rem(18);
+        font-weight: 500;
+        @include lato;
+        color: #2C3655;
+    }
+}
+//countery flag change
+.country__toreach{
+    background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    gap: 10px;
+    padding-left: 15px;
+    input{
+        border: unset;
+        background: transparent;
+        color: var(--text);
+    }
+    .nice-select{
+        border: unset;
+        padding: 0;
+        width: 65px;
+        margin-left: 18px;
+        margin-top: 5px;
+    }
+    .nice-select:after {
+        border-bottom: 0px solid var(--placeholder);
+        border-right: 0px solid var(--placeholder);
+        content: '';
+        background: url(../../assets/img/svg/dropdown.svg) no-repeat center center;
+        background-size: cover;
+        display: block;
+        height: 10px;
+        margin-top: 0px;
+        pointer-events: none;
+        position: absolute;
+        left: -16px;
+        bottom: 30%;
+        -webkit-transform-origin: 66% 66%;
+        -ms-transform-origin: 66% 66%;
+        transform-origin: 66% 66%;
+        -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        transform: rotate(2deg);
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        width: 13px;
+    }
+}
+//varified number
+.varified__number{
+    .input__grp{
+        input{
+            text-align: center;
+        }
+    }
+}
+.forgot{
+    color: var(--base);
+    font-weight: 400;
+    font-size: rem(16);
+    @include lato;
+    text-align: right;
+    margin-top: 12px;
+}
+// sign up related

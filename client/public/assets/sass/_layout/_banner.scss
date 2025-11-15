@@ -1,0 +1,1583 @@
+//banner section here
+.banner__section{
+    padding: 130px 0 40px;
+    &::before{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 55%;
+        background: var(--bgsection);
+        content: "";
+        z-index: -1;
+    }
+}
+.fasilities__inner{
+    gap: 10px;
+    @include breakpoint(max-xl){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .fasilities__item{
+        gap: 10px;
+        padding: 12px 10px 14px;
+        border: 1px solid var(--bordertwo);
+        border-radius: 5px;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.5);
+        @include lato;
+        width:  calc(100% / 8);
+        transition: all 0.5s;
+        .icon{
+            img{
+                transition: all 0.4s;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        span{
+            font-weight: 500;
+            transition: all 0.4s;
+        }
+        &:hover{
+            background: var(--base);
+            span{
+                color: var(--textwhite);
+            }
+            .icon{
+                img{
+                    filter: brightness(25);
+                }
+            }
+        }
+        @include breakpoint(max-xl){
+            width: calc(100% / 7);
+        }
+        @include breakpoint(max-lg){
+            width: calc(100% / 5);
+        }
+        @include breakpoint(max-md){
+            width: calc(100% / 3);
+        }
+        @include breakpoint(max-sm){
+            width: calc(100% / 3);
+        }
+        @include breakpoint(max-sm){
+            width: calc(100%);
+        }
+    }
+    .active{
+        background: var(--base);
+        span{
+            color: var(--textwhite);
+        }
+        .icon{
+            img{
+                filter: brightness(25);
+            }
+        }
+    }
+}
+//fasilities inner two
+.fasilities__innertwo{
+    background: var(--textwhite);
+    padding: 10px 10px;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    .fasilities__item{
+        width: calc(100%);
+        justify-content: flex-start;
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+}
+.pay__sponsor__thumbtwo{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+//fasilities inner two
+.recharge__paymentbox{
+    background: var(--textwhite);
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px 40px;
+    border-radius: 5px;
+    @include breakpoint(max-sm){
+        padding: 20px 15px;
+    }
+    h5{
+        margin-bottom: 15px;
+        font-weight: 400;
+    }
+    .prepaid__option{
+        display: flex;
+        margin-bottom: 30px;
+        gap: 30px;
+        justify-content: center;
+        .prepaid__check{
+            input{
+                box-shadow: none;
+                border: 1px solid var(--border);
+            }
+            .form-check-input:checked[type=radio] {
+                border: none;
+            }
+        }
+    }
+    form{
+        select{
+            border-radius: 5px;
+            border: 1px solid var(--bordertwo);
+            padding: 16px 30px;
+            color: var(--placeholder);
+            width: 100%;
+            font-size: rem(16);
+            @include lato;
+        }
+        input{
+            border-radius: 5px;
+            border: 1px solid var(--bordertwo);
+            padding: 16px 30px;
+            color: var(--placeholder);
+            width: 100%;
+            font-size: rem(16);
+            @include lato;
+            outline: none;
+        }
+        ::placeholder{
+            color: var(--placeholder);
+        }
+    }
+    .payment__check{
+        gap: 15px;
+        align-items: center;
+        .form-check-input{
+            width: 24px;
+            height: 24px;
+            border: 1px solid var(--bordertwo);
+            box-shadow: none;
+            background-color: var(--textwhite);
+        }
+        .form-check-label{
+            font-size: rem(18);
+            color: var(--darkextra);
+        }
+        .form-check-input:checked[type=checkbox] {
+            --bs-form-check-bg-image: url(../../assets/img/banner/check.png);
+            background-size: 15px;
+        }
+    }
+}
+.recharge__pymentboxthree{
+    padding: 30px 30px;
+    .form__thumb__added{
+        .payment__iconaddeds{
+            position: relative;
+            overflow: hidden;
+            .nice-select{
+                padding: 10px 35px 13px 80px;
+            }
+            input{
+                padding: 10px 35px 13px 80px;
+            }
+            .icon{
+                position: absolute;
+                left: 0;
+                top: 1px;
+                background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+                width: 60px;
+                height: 49px;
+                img{
+                    padding-top: 4px;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-sm){
+        padding: 25px 15px;
+    }
+}
+.payment__sponsor{
+    position: relative;
+    .pay__sponsor__item{
+        width: 100%;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .owl-nav{
+        .owl-prev{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            i{
+                background: var(--textwhite);
+                border-radius: 50%;
+            }
+        }
+        .owl-next{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            i{
+                background: var(--textwhite);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.pay__sponsor__grid{
+    background: var(--textwhite);
+    padding: 20px 10px;
+    .promo__box{
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+    .morehead{
+        font-size: rem(24);
+        font-weight: 400;
+        color: var(--text);
+        display: block;
+        text-align: center;
+        margin: 10px 0 35px;;
+    }
+    .morebtn{
+        font-size: rem(18);
+        font-weight: 600;
+        color: var(--base);
+        text-align: center;
+    }
+}
+//banner section here
+
+//Promo sponsor here
+.promo__sponsor__wrappertwo,
+.promo__sponsor__wrapper{
+    position: relative;
+    .owl-nav{
+        position: absolute;
+        bottom: calc(100% + 20px);
+        right: 0;
+    }
+}
+.promo__sponsor__item{
+    .promo__box{
+        &:not(:last-child){
+            margin-bottom: 13px;
+        }
+    }
+    &:last-child{
+        margin-right: 2px;
+    }
+}
+.promo__box{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--bordertwo);
+    border-radius: 5px;
+    gap: 20px;
+    transition: all 0.4s;
+    .content{
+        .link{
+           margin-bottom: 10px;
+           color: var(--text); 
+        }
+        a{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span{
+                color: var(--base);
+                font-size: rem(18);
+                font-weight: 500;
+                @include lato;
+                display: block;
+            }
+            .icon{
+                i{
+                    font-size: rem(20);
+                    color: var(--base);
+                }
+            }
+        }
+    }
+    &:hover{
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+}
+//Promo sponsor end
+
+//banner section Two Here
+.banner__section__two{
+    padding: 130px 0 80px;
+    .breadcumnd__link{
+        li{
+            color: var(--text);
+            font-weight: 500 !important;
+            @include lato;
+            a{
+                color: var(--text);
+                font-weight: 500 !important;
+                @include lato;
+            }
+        }
+    }
+}
+//banner section Two End
+
+//banner flight trip here
+.flight__roundtrip{
+    margin-bottom: -210px;
+}
+.flight__onewaysection{
+    padding-top: 175px;
+}
+.dubai{
+    font-size: 26px;
+}
+
+//flight one way item
+.flight__oneway__item{
+    @include breakpoint(max-xl){
+        overflow-x: scroll;
+    }
+    .flight__oneway__inner{
+        @include breakpoint(max-xl){
+            width: 700px;
+            padding-bottom: 15px;
+        }
+    }
+    .table{
+        width: 100%;
+        margin-bottom: 0;
+        tbody{
+            background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+            tr{
+                td{
+                    border: unset;
+                    padding: 30px 20px;
+                    position: relative;
+                    .troth{
+                        color: #A3ADE7;
+                        text-decoration: line-through;
+                        display: block;
+                    }
+                    .cmn__btn{
+                        padding: 8px 18px;
+                    }
+                    &:not(:first-child){
+                       &::before{
+                        position: absolute;
+                        content: "";
+                        height: 70px;
+                        width: 1px;
+                        background: url(../../assets/img/payment/line-vertical.png) no-repeat center center;
+                        background-size: cover;
+                        top: 50%;
+                        left: -20px;
+                        transform: translateY(-50%);
+                        @include breakpoint(max-xl){
+                            left: -10px;
+                        }
+                        @include breakpoint(max-lg){
+                            left: -10px;
+                        }
+                       }
+                    }
+                }
+            }
+        }
+        tr{
+            th{
+                padding: 15px 25px;
+            }
+        }
+    }
+    .flight__wayfooter{
+        padding: 15px 30px;
+        .dicon{
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            border: 1px solid var(--input);
+            img{
+                width: 12px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+//table two
+.flight__oneway__item2{
+        @include breakpoint(max-xl){
+            overflow-x: scroll;
+        }
+    .flight__oneway__inner2{
+        @include breakpoint(max-xl){
+            width: 700px;
+        }
+    }
+    .headline__text{
+        padding: 15px 25px;
+    }
+    .tabletwo__body{
+        .table__conponent{
+            padding: 30px 20px;
+            li{
+                position: relative;
+                &:not(:first-child){
+                    &::before{
+                     position: absolute;
+                     content: "";
+                     height: 70px;
+                     width: 1px;
+                     background: url(../../assets/img/payment/line-vertical.png) no-repeat center center;
+                     background-size: cover;
+                     top: 50%;
+                     left: -40px;
+                     transform: translateY(-50%);
+                     @include breakpoint(max-xxl){
+                         left: -30px;
+                     }
+                     @include breakpoint(max-lg){
+                         left: -10px;
+                     }
+                    }
+                 }
+            }
+        }
+        .right__tableprice{
+            border-left: 1px solid var(--cmnborder);
+            padding: 30px;
+            width: 250px;
+            min-height: 100%;
+            .cmn__btn{
+                @include breakpoint(max-xxl){
+                    padding: 9px 15px;
+                }
+            }
+        }
+    }
+    .flight__wayfooter{
+        padding: 15px 30px;
+        .dicon{
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            border: 1px solid var(--input);
+            img{
+                width: 12px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+//banner flight trip End
+
+//flight confirm details Here
+.flight__oneway__confirmdetails{
+    padding: 35px 40px 40px;
+    border-radius: 10px;
+    @include breakpoint(max-sm){
+        padding: 25px 15px 25px;
+    }
+    .form-check-input{
+        background-color: var(--white);
+        border: 1px solid var(--text);
+        box-shadow: none;
+        outline: none;
+        min-width: 16px;
+        min-height: 16px;
+    }
+}
+.baggage__info{
+    transition: all 0.4s;
+    background: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+    .icon{
+        width: 54px;
+        height: 54px;
+        border: 1px solid var(--input);
+        border-radius: 5px;
+    }
+    .content{
+        width: calc(100% - 54px);
+        span{
+            transition: all 0.4s;
+        }
+    }
+    &:hover{
+        background: var(--base);
+        .icon{
+            img{
+                filter: brightness(25);
+            }
+        }
+        .content{
+            span{
+                color: var(--white) !important;
+            }
+            img{
+                filter: brightness(25);
+            }
+        }
+    }
+}
+.protection__list{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li{
+        @include breakpoint(max-xs){
+            width: calc(100% / 2);
+        }
+        @include breakpoint(max-xxs){
+            width: calc(100%);
+        }
+    }
+}
+.covid__restriction{
+    background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+    border-radius: 5px;
+    padding: 30px 30px;
+    border: 1px solid var(--input);
+    gap: 20px;
+    @include breakpoint(max-md){
+        flex-wrap: wrap;
+        padding: 20px 20px;
+    }
+    .icons{
+        min-width: 54px;
+        height: 54px;
+        border-radius: 5px;
+        border: 1px solid var(--input);
+    }
+    p{
+        max-width: 450px;
+    }
+    .cmn__btn{
+        padding: 9px 18px;
+        font-size: 18px;
+        min-width: 169px;
+    }
+}
+//flight confirm details End
+
+//new breadcumd Here
+.new__breadcumd{
+    background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+    padding: 35px 0;
+}
+//new breadcumd End
+
+//banner section Three Here
+.banner__three{
+    padding: 130px 0 80px;
+    overflow: hidden;
+    position: relative;
+    .element__man{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .watch__element{
+        position: absolute;
+        top: 50px;
+        left: 20px;
+    }
+    .touch__element{
+        position: absolute;
+        bottom: 50px;
+        left: 40px;
+    }
+    .banner__wrapper__two{
+        position: relative;
+        z-index: 1;
+    }
+    .ball__element{
+        position: absolute;
+        top: 80px;
+        right: 60px;
+        @include breakpoint(max-xxl){
+            display: none;
+        }
+    }
+}
+//banner section Three End
+
+//hotel booking banner Here
+.hotel__booksection{
+    background: url(../../assets/img/hotel/hotel.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 170px 0 210px;
+    @include breakpoint(max-xxl){
+        padding: 160px 0 210px;
+    }
+    @include breakpoint(max-xl){
+        position: relative;
+        &::before{
+            position: absolute;
+            inset: 0;
+            content: "";
+            background: #cee3f191;
+        }
+        .hotel__content{
+            position: relative;
+        }
+    }
+    @include breakpoint(max-md){
+        padding: 150px 0 210px;
+    }
+    .header-section{
+        background: transparent;
+        .header-wrapper{
+            .sigin__grp{
+                .outline__btn{
+                    border: 1px solid #B1BDFE;
+                }
+            }
+        }
+    }
+}
+.hotel__content{
+    h1{
+        margin-bottom: 30px;
+        @include breakpoint(max-xxl){
+            font-size: rem(58);
+        }
+        @include breakpoint(max-md){
+            font-size: rem(42);
+            margin-bottom: 20px;
+        }
+        @include breakpoint(max-xxs){
+            font-size: rem(29);
+            margin-bottom: 18px;
+        }
+    }
+    p{
+        font-size: rem(24);
+        font-weight: 400;
+        color: var(--text);
+        margin-bottom: 40px;
+        @include breakpoint(max-md){
+            margin-bottom: 30px;
+            font-size: rem(20);
+        }
+        @include breakpoint(max-xxs){
+            margin-bottom: 30px;
+            font-size: rem(18);
+        }
+    }
+    .cmn__grp{
+        display: flex;
+        align-items: center;
+        gap: 15px 24px;
+        .cmn__btn{
+            border: 1px solid #BBC3EE;
+        }
+        @include breakpoint(max-xxs){
+            gap: 15px;
+            .cmn__btn{
+                padding: 8px 18px;
+            }
+        }
+    }
+}
+//hotel booking banner End
+
+//hotel booking categoris Here
+.hotelbooking__categoris__wrap{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: var(--white);
+    padding: 30px 30px;
+    transform: translateY(-110px);
+    @include breakpoint(max-sm){
+        padding: 25px 15px;
+    }
+    .dating__body{
+        .hoteltitle{
+            font-size: rem(24);
+            color: var(--text);
+            @include lato;
+            margin-bottom: 30px;
+            font-weight: 400;
+            @include breakpoint(max-sm){
+                font-size: rem(22);
+                margin-bottom: 20px;
+            }
+        }
+        .dating__body__box {
+            justify-content: flex-start;
+        }
+    }
+}
+//hotel booking categoris End
+
+//flight booking Here
+.flight__booksection{
+    background: url(../../assets/img/flights/flight-banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+//flight booking End
+
+//breadcumnd__banner 
+.breadcumnd__banner{
+    padding: 180px 0 110px;
+    background: var(--base);
+    @include breakpoint(max-sm){
+        padding: 160px 0 85px;
+    }
+}
+.breadcumnd__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bread__title{
+    color: var(--white);
+    margin-right: 20px;
+    @include breakpoint(max-md){
+        font-size: rem(42);
+    }
+    @include breakpoint(max-sm){
+        font-size: rem(36);
+    }
+}   
+.breadcumnd__link{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px 3px;
+    li{
+        font-size: rem(18);
+        color: var(--white);
+        font-weight: 500;
+        @include lato;
+        a{
+            font-size: rem(18);
+            color: var(--white); 
+            font-weight: 500;
+            @include lato;
+        }
+        i{
+            color: var(--white);
+            font-size: rem(24);
+        }
+    }
+}
+//breadcumnd__banner 
+
+//booking landing one   
+.booking__landing__one{
+    padding: 90px 0 0;
+    overflow: hidden;
+} 
+.booking__thumb__one{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+    @include breakpoint(max-lg){
+        height: 350px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.trans50y{
+    transform: translateY(-140px);
+    margin-bottom: -70px;
+    @include breakpoint(max-xl){
+        transform: translateY(-0px);
+        margin-bottom: -0px;
+        margin-top: 40px;
+    }
+}
+.booking__landing__wrap1{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 30px 30px;
+    background: var(--white);
+    @include breakpoint(max-xs){
+        padding: 30px 15px;
+    }
+}
+.booking__landing__head{
+    .nav{
+        gap: 12px 20px;
+        border: unset;
+        padding: 0px 0px;
+        box-shadow: none;
+        .nav-item{
+            background: transparent;
+            .nav-link{
+                padding: 0 0;
+                border: none;
+                background: transparent;
+                border-radius: 5px;
+                &.active{
+                    background: var(--base);
+                }
+                .fasilities__item{
+                    background: transparent;
+                    padding: 10px 25px 10px;
+                    .icon{
+                        img{
+                            width: 25px;
+                            object-fit: contain;
+                        }
+                    }
+                    &:hover{
+                        background: var(--base);
+                    }
+                }
+            }
+        }
+    }
+}
+.dating__body{
+    .dating__body__box{
+        display: flex;
+        align-items: center;
+        gap: 15px 24px;
+        justify-content: center;
+        @include breakpoint(max-xl){
+            flex-wrap: wrap;
+        }
+    }
+    .dating__hidden{
+        overflow: hidden;
+    }
+    .dating__item{
+        width: 100%;
+        position: relative;
+        border: 1px solid var(--bordertwo);
+        border-radius: 5px;
+        .datelocation,
+        #datepicker2,
+        #datepicker{
+            position: relative;
+            .calendaricon{
+                position: absolute;
+                right: 15px;
+                top: 8px;
+                i{
+                    color: var(--placeholder);
+                    font-size: 24px;
+                }
+            }
+        }
+        .calendaricon{
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            i{
+                color: var(--placeholder);
+                font-size: 24px;
+            }
+        }
+        input{
+            box-shadow: none;
+            outline: none;
+            color: var(--placeholder);
+            padding: 16px 30px 16px 15px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        &::placeholder{
+            color: var(--placeholder);
+        }
+        .cmn__btn{
+            border: none;
+            outline: none;
+            text-align: center;
+            width: 100%;
+        }
+        @include breakpoint(max-xl){
+            width: calc(100% / 4);
+        }
+        @include breakpoint(max-lg){
+            width: calc(100% / 3);
+        }
+        @include breakpoint(max-md){
+            width: calc(100%);
+            input{
+                width: 100%;
+            }
+        }
+    }
+    .select__border{
+        border: none;
+    }
+    .booking__radio{
+        display: flex;
+        align-items: center;
+        gap: 12px  30px;
+        flex-wrap: wrap;
+        .b__radio{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .form-check-input{
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                border: 1px solid var(--bordertwo);
+                box-shadow: none;
+                outline: none;
+            }
+            label{
+                font-size: rem(18);
+                font-weight: 400;
+                color: var(--text);
+            }
+        }
+    }
+}
+.dating__body__box.dating__flight{
+    flex-wrap: wrap;
+    display: flex;
+    .dating__item{
+        max-width: 100%;
+        border: 1px solid var(--bordertwo);
+        position: relative;
+        @include breakpoint(max-xl){
+            width: 100%;
+        }
+        @include breakpoint(max-md){
+            width: calc(100%) !important;
+        }
+        .datelocation{
+            position: relative !important;
+            input{
+                box-shadow: none;
+                outline: none;
+                color: var(--placeholder);
+                padding: 16px 30px 16px 15px;
+                border-radius: 5px;
+            }
+        }
+        .calendaricon{
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            display: block;
+            i{
+                color: var(--placeholder);
+                font-size: 24px;
+            }
+        }
+    }
+    .select__border{
+        border: none;
+    }
+}
+.boock__check{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .form-check-input{
+        box-shadow: none;
+        outline: none;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--bordertwo);
+        border-radius: 5px;
+    }
+    input:checked[type=checkbox] {
+        --bs-form-check-bg-image: url(../../assets/img/payment/check.png);
+        background-size: 0.6rem;
+    }
+    .form-check-input:checked {
+        background-color: #F4F6FC;
+        border-color: var(--checkborder);
+    }
+    label{
+        font-size: rem(18);
+        font-weight: 400;
+        @include lato;
+        color: var(--placeholder);
+    }
+}
+//booking landing one  
+
+//booking landing two 
+.booking__landing__two{
+    padding: 120px 0 100px;
+}
+.max-200{
+    max-width: 200px;
+    margin: 0 auto;
+}  
+.booking__landing__headtwo{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 10px 10px;
+    height: 100%;
+    .nav{
+        .nav-item{
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+            .nav-link{
+                width: 100%;
+                .fasilities__item {
+                    padding: 14px 25px 14px;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+} 
+.booking__landing__bodytwo{
+    .dating__body{
+        box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        padding: 30px 40px;
+        height: 100%;
+        @include breakpoint(max-lg){
+            padding: 20px 15px;
+        }
+        @include breakpoint(max-sm){
+            padding: 25px 15px;
+        }
+        .dating__item{
+            @include breakpoint(max-xxl){
+                width: 100%;
+            }
+            i{
+                font-size: 22px;
+                color: var(--placeholder);
+            }
+        }
+    }
+}
+.dating__body{
+    .bdcommontext{
+        color: var(--text);
+        @include lato;
+        font-weight: 400;
+        @include breakpoint(max-sm){
+            font-size: rem(20);
+        }
+    }
+}
+.booktricket__thumb{
+    width: 100%;
+    position: relative;
+    @include breakpoint(max-xl){
+        width: initial !important;
+    }
+    @include breakpoint(max-lg){
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .cmn__hotel{
+        position: absolute;
+        left: 20px;
+        top: 190px;
+        background: var(--white);
+        color: var(--base);
+        padding: 7px 18px 6px;
+    }
+    .cmn__flight{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: var(--white);
+        color: #0B77B4;
+        padding: 7px 18px 6px;
+    }
+}
+//booking landing two   
+
+//booking landing there  
+.booking__landingsection__three{
+    padding: 90px 0 0;
+    background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+} 
+.tab-pane{
+    position: relative;
+    .hoelmainshape{
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+    .hoelmainshape2{
+        position: absolute;
+        left: 95%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1; 
+    }
+    .hoelmainshape3{
+        position: absolute;
+        left: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1; 
+    }
+}
+.booking__landing__headthree{
+    background: var(--base);
+    padding: 30px 0;
+    .booking__landing__head{
+        .nav{
+            background: none;
+            @include breakpoint(max-xxl){
+                gap: 10px 10px;
+            }
+            .nav-item{
+                .nav-link{
+                    &.active{
+                        background: var(--white);
+                        .fasilities__item{
+                            .icon{
+                                img{
+                                    filter: unset;
+                                }
+                            }
+                            span{
+                                color: var(--base);
+                                font-weight: 500;
+                                @include lato;
+                            }
+                        }
+                    }
+                    .fasilities__item{
+                        border: 1px solid #4B61D6;
+                        @include breakpoint(max-xxl){
+                            padding: 10px 17px 10px;
+                        }
+                        .icon{
+                            img{
+                                filter: brightness(25);
+                            }
+                        }
+                        span{
+                            color: var(--white);
+                            font-weight: 500;
+                            @include lato;
+                        }
+                        &:hover{
+                            .icon{
+                                img{
+                                    filter: brightness(25);
+                                }
+                            }
+                            span{
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search__contact{
+        display: flex;
+        align-items: center;
+        gap: 15px 30px;
+        @include breakpoint(max-xxl){
+            gap: 10px 10px;
+        }
+        @include breakpoint(max-xl){
+            justify-content: center;
+            margin-top: 12px;
+        }
+        @include breakpoint(max-xs){
+           display: grid;
+        }
+        form{
+            max-width: 250px;
+            border: 1px solid #4B61D6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            padding: 0 24px 0 9px;
+            input{
+                background: transparent;
+                padding: 12px 0px 14px 15px;
+                border: unset;
+                color: var(--white);
+                font-size: 18px;
+                font-weight: 500;
+            }
+            ::placeholder{
+                color: var(--white);
+            }
+            button{
+                background: transparent;
+                outline: none;
+                box-shadow: none;
+                border: unset;
+            }
+            @include breakpoint(max-xxl){
+                max-width: 180px;
+                padding: 0 4px 0 1px;
+            }
+            
+            @include breakpoint(max-xs){
+                max-width: 100%;
+                display: flex;
+                button{
+                    display: none;
+                }
+            }
+        }
+        .cmn__btn{
+            color: var(--white);
+            border: 1px solid #4154B9;
+            padding: 13px 15px 13px;
+            @include breakpoint(max-xs){
+                text-align: center;
+            }
+        }
+    }
+}
+.booking__landing__wrap3{
+    padding: 60px 0 100px;
+    .dating__body{
+        position: relative;
+        background: var(--white);
+        .dots__shape1{
+            position: absolute;
+            top: -35px;
+            right: -35px;
+            z-index: -1;
+            @include breakpoint(max-md){
+                display: none;
+            }
+        }
+        .dots__shape2{
+            position: absolute;
+            bottom: -35px;
+            left: -35px;
+            z-index: -1;
+            @include breakpoint(max-md){
+                display: none;
+            }
+        }
+    }
+}
+.booklanding__threecontent{
+    position: relative;
+    .threeball{
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        z-index: -1;
+    }
+    h2{
+        margin-bottom: 30px;
+        @include breakpoint(max-md){
+            font-size: rem(48);
+        }
+        @include breakpoint(max-sm){
+            font-size: rem(40);
+            margin-bottom: 20px;
+        }
+        @include breakpoint(max-xs){
+            font-size: rem(29);
+            margin-bottom: 20px;
+        }
+    }
+    p{
+      font-size: rem(24);
+      font-weight: 400;
+      @include lato;  
+      margin-bottom: 40px;
+      @include breakpoint(max-sm){
+        font-size: rem(20);
+        margin-bottom: 30px;
+      }
+    }
+    .cmn__grp{
+        display: flex;
+        align-items: center;
+        gap: 20px 30px;
+        @include breakpoint(max-xs){
+            flex-wrap: wrap;
+        }
+        .video__grp{
+            display: flex;
+            align-items: center;
+            gap: 10px 20px;
+            .video{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--base);
+                border-radius: 50%;
+                position: relative;
+                i{
+                    margin-top: -1px;
+                    font-size: 28px;
+                    color: var(--white);
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 55px;
+                    height: 55px;
+                    background: #C1CBFF;
+                    z-index: -1;
+                    border-radius: 50%;
+                    animation: flashs 4s linear infinite;
+                }
+            }
+            span{
+                font-size: rem(18);
+                font-weight: 400;
+                @include lato;
+                color: var(--text);
+            }
+        }
+    }
+    @include breakpoint(max-lg){
+        margin-bottom: 25px;
+    }
+}
+@keyframes flashs {
+    0%{
+        transform: scale(1.1);
+        opacity: 0.1;
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+//booking landing there  
+
+//help banner 
+.help__banner{
+    text-align: center;
+    margin: 0 auto;
+    h3{
+        margin-bottom: 20px;
+    }
+    form{
+        background: var(--white);
+        border-radius: 5px;
+        padding: 4px 10px 3px 5px;
+        display: flex;
+        justify-content: space-between;
+        input{
+            color: var(--darkextra);
+            background: transparent;
+            border: none;
+            @include breakpoint(max-xs){
+                text-align: center;
+            }
+        }
+        ::placeholder{
+            color: var(--darkextra);
+        }
+        .cmn__btn{
+            border-radius: 5px;
+        }
+    }
+}
+//help banner 
+
+//help boxes 
+.help__wrapper{
+    margin-bottom: -220px;
+}
+.help__items{
+    background: var(--white);
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 30px 30px;
+    @include breakpoint(max-xxl){
+        padding: 25px 15px;
+    }
+    @include breakpoint(max-xxl){
+        padding: 20px 8px;
+    }
+    .content{
+        h5{
+            font-weight: 700;
+            margin-bottom: 10px;
+            @include breakpoint(max-xxl){
+                font-size: 20px;
+            }
+            @include breakpoint(max-xxl){
+                font-size: 18px;
+            }
+            a{
+                color: var(--text);
+            }
+        }
+        p{
+            font-size: rem(16);
+            color: var(--text);
+            @include lato;
+        }
+        a{
+            margin-top: 15px;
+            span{
+                font-weight: 500;
+                @include lato;
+                color: var(--text);
+                font-size: 18px;
+            }
+            .icon{
+                i{
+                    color: var(--text);
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .icons{
+        border: 1px solid #DFE2F6;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        border-radius: 5px;
+        transition: all 0.4s;
+        img{
+            transition: all 0.4s;
+        }
+    }
+    &:hover{
+        .content{
+            h5{
+                a{
+                    color: var(--base);
+                }
+            }
+        }
+        .icons{
+            background: var(--base);
+            img{
+                filter: brightness(25);
+            }
+        }
+    }
+}
+.help__section{
+    padding: 220px 0 120px;
+}
+.help__knowledge{
+    .help__items{
+        display: flex;
+        gap: 20px;
+        @include breakpoint(max-xl){
+            height: 100%;
+        }
+        .content{
+            width: calc(100% - 60px);
+            p{
+                @include breakpoint(max-xl){
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.no__knowledge{
+    .help__items{
+        @include breakpoint(max-xxl){
+            padding: 25px 20px;
+        }
+        .icons{
+            margin: 0 0 20px;
+        }
+    }
+}
+//help boxes 
+
+
+
+
+//defaoul owl nav
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: none;
+    color: #fff;
+    text-decoration: none;
+}
+.owl-nav{
+    .owl-prev{
+        transition: all 0.4s;
+        i{
+            color: var(--darkbase);
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid var(--bordertwo);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s;
+            font-size: rem(20);
+            transform: rotate(180deg);
+        }
+        &:hover{
+            background: transparent;
+            i{
+                background: var(--base);
+                color: var(--textwhite);
+                border-color: var(--base);
+            }
+        }            
+    }
+    .owl-next{
+        transition: all 0.4s;
+        i{
+            color: var(--darkbase);
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid var(--bordertwo);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s;
+            font-size: rem(20);
+        }
+        &:hover{
+            background: transparent;
+            i{
+                background: var(--base);
+                color: var(--textwhite);
+                border-color: var(--base);
+            }
+        }        
+    }
+}
+//defaoul owl nav
